@@ -1,9 +1,10 @@
-Simple approach:  use the replaceAll( ) function.
-
+//Simple approach:  use the replaceAll() function.
 public String removeVowels(String S) {
         return S.replaceAll("[aeiou]", "");
     }
-High performance approach - StringBuffer to build and user created isVowel Function
+
+
+//High performance approach - StringBuffer to build and user created isVowel Function
 class Solution {
     public String removeVowels(String S) {
         StringBuffer sb = new StringBuffer(S.length());
