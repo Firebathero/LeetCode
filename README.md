@@ -1,2 +1,2 @@
 # LeetCode
- My leetcode solutions
+My leetcode editorials!
