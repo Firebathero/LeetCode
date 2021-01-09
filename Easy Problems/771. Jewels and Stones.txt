@@ -1,0 +1,34 @@
+//for each stone, compare to each jewel identifier, and if match, increment jewels found
+class Solution {
+  public int numJewelsInStones(String jewels, String stones) {
+    int jewelyStones = 0;
+    for (char stone: stones.toCharArray()) {
+      for (char jewel: jewels.toCharArray()) {
+        if (stone == jewel) {
+            ++jewelyStones;
+            break;
+        }
+      }
+    }
+    return jewelyStones;
+  }
+}
+
+//
+class Solution {
+  public int numJewelsInStones(String jewels, String stones) {
+    Set <Character> jewelSet = new HashSet < >();
+
+    for (char jewel: jewels.toCharArray()) {
+      jewelSet.add(jewel);
+    }
+    int jewelsFound = 0;
+    for (char stone: stones.toCharArray()) {
+      if (jewelSet.contains(stone)) {
+        jewelsFound++;
+      }
+    }
+
+    return jewelsFound;
+  }
+}
