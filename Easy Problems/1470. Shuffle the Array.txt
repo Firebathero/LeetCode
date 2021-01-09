@@ -1,0 +1,16 @@
+//create 2 pointers to track the source array indices of x and y
+//int i tracks where we place values in the ans array
+//place x value, increment x pointer, increment target, place y value, increment y pointer, increment target, repeat
+class Solution {
+  public int[] shuffle(int[] nums, int n) {
+    int[] ans = new int[n * 2];
+    int leftPointer = 0,
+    rightPointer = n,
+    i = 0;
+    while (rightPointer < nums.length) {
+      ans[i] = nums[leftPointer]; ++leftPointer; ++i;
+      ans[i] = nums[rightPointer]; ++rightPointer; ++i;
+    }
+    return ans;
+  }
+}
